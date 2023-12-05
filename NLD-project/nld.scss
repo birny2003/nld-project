@@ -28,7 +28,36 @@
   margin-bottom: $margin;
   padding-top: $padding;
 }
-
+@mixin h3-4 {
+  color: hsl(251, 69%, 16%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
+@mixin list {
+  color: hsl(251, 69%, 16%);
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  font-family: Helvetica;
+  margin: auto;
+  width: 60%;
+}
+@mixin report {
+  color: hsl(179, 59%, 99%);
+  font-size: 10px;
+  opacity: 1;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+@mixin spacing-main {
+  padding-top: 10px;
+  margin-right: 200px;
+  margin-bottom: 5px;
+}
 p {
   @include spacing(0px, 0px);
 }
@@ -53,4 +82,151 @@ p {
 div.heading {
   @include div-heading(105px, 95px);
   @include flex(10px);
+}
+h1 {
+  margin-top: 105px;
+}
+h3,
+h4 {
+  @include h3-4;
+}
+ul {
+  @include list;
+}
+li {
+  margin-bottom: 5px;
+}
+.middle-main {
+  @include report;
+  background-image: url(vdvbale.jpg);
+}
+.report {
+  @include spacing-main;
+}
+@media print {
+  h1,
+  h2 {
+    color: black;
+  }
+}
+@media (min-width: 600px) {
+  section.younes {
+    padding-top: 28vw;
+    margin: 12px;
+    background-size: contain;
+  }
+  div.heading {
+    font-size: 12px;
+  }
+  .upper-main {
+    height: 120vh;
+  }
+  h3 {
+    padding-top: 200px;
+    margin-top: 150px;
+  }
+  h3,
+  h4 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  h4 {
+    margin-top: 30px;
+  }
+  ul {
+    font-size: 22px;
+  }
+  li {
+    margin: 10px;
+  }
+  .middle-main {
+    font-size: 25px;
+    height: 125vh;
+  }
+  .report {
+    margin-right: 320px;
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-top: 140px;
+    padding-top: 43px;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.heading {
+    font-size: 18px;
+    padding-top: 450px;
+  }
+  .younes {
+    margin-bottom: 200px;
+  }
+  .upper-main {
+    margin-top: 370px;
+  }
+  .middle-main {
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: 1225px) {
+  h1 {
+    margin-top: 275px;
+  }
+  h3 {
+    padding-top: 100px;
+  }
+  h3,
+  h4 {
+    font-size: 30px;
+  }
+  ul {
+    font-size: 28px;
+  }
+  .report {
+    margin-right: 530px;
+  }
+}
+@media (min-width: 1440px) {
+  .middle-main {
+    padding-bottom: 340px;
+  }
+  .report {
+    margin-right: 710px;
+    padding-top: 50px;
+    font-size: 30px;
+  }
+}
+@media (min-width: 2560px) {
+  header {
+    margin-bottom: 940px;
+    font-size: 40px;
+  }
+  .younes {
+    margin-bottom: 250px;
+  }
+  div.heading {
+    font-size: 40px;
+  }
+  .upper-main {
+    margin-top: 350px;
+  }
+  h3,
+  h4 {
+    font-size: 40px;
+  }
+  .middle-main {
+    padding-top: 95px;
+    padding-bottom: 1020px;
+  }
+  ul {
+    font-size: 38px;
+  }
+  .report {
+    padding-bottom: 20px;
+    padding-right: 1300px;
+    font-size: 40px;
+  }
 }
