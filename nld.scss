@@ -1,3 +1,29 @@
+.Header {
+  .navbar {
+    overflow: hidden;
+    background-color: hsla(244, 100%, 14%, 1);
+    font-family: Arial;
+  }
+  .navbar a {
+    float: left;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    padding-right: 12px;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  .options {
+    padding-top: 13px;
+  }
+  .logo {
+    width: 25px;
+    padding-top: 3px;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+}
 @mixin spacing($margin, $padding) {
   padding-left: $padding;
   padding-right: $padding;
@@ -8,7 +34,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-color: #000;
+  background-color: #000000;
 }
 @mixin div-heading($margin, $padding) {
   margin-bottom: $margin;
@@ -17,7 +43,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 6px;
 }
-@mixin flex($gap) {
+@mixin flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +81,7 @@
 }
 @mixin spacing-main {
   padding-top: 10px;
-  margin-right: 200px;
+  margin-right: 300px;
   margin-bottom: 5px;
 }
 p {
@@ -80,8 +106,8 @@ p {
   height: 35vh;
 }
 div.heading {
-  @include div-heading(105px, 95px);
-  @include flex(10px);
+  @include div-heading(105px, 200px);
+  @include flex;
 }
 h1 {
   margin-top: 105px;
@@ -99,7 +125,10 @@ li {
 .middle-main {
   @include report;
   background-image: url(vdvbale.jpg);
+  text-shadow: 10px 7px 30px hsl(0, 0%, 50%);
+  padding-top: 10px;
 }
+
 .report {
   @include spacing-main;
 }
@@ -149,6 +178,12 @@ li {
   }
 }
 @media screen and (min-width: 768px) {
+  .Header .logo {
+    width: 40px;
+  }
+  .Header .navbar a {
+    font-size: 17px;
+  }
   h1 {
     margin-top: 140px;
     padding-top: 43px;
@@ -156,9 +191,15 @@ li {
 }
 
 @media (min-width: 1024px) {
+  .Header .logo {
+    width: 60px;
+  }
+  .Header .navbar a {
+    font-size: 25px;
+  }
   div.heading {
     font-size: 18px;
-    padding-top: 450px;
+    padding-top: 300px;
   }
   .younes {
     margin-bottom: 200px;
@@ -172,6 +213,9 @@ li {
 }
 
 @media (min-width: 1225px) {
+  .Header .logo {
+    width: 65px;
+  }
   h1 {
     margin-top: 275px;
   }
@@ -190,6 +234,9 @@ li {
   }
 }
 @media (min-width: 1440px) {
+  div.heading {
+    padding-top: 600px;
+  }
   .middle-main {
     padding-bottom: 340px;
   }
@@ -200,33 +247,42 @@ li {
   }
 }
 @media (min-width: 2560px) {
+  .Header .logo {
+    width: 150px;
+  }
+  .Header .navbar a {
+    font-size: 75px;
+  }
+  div.heading {
+    padding-top: 800px;
+  }
   header {
     margin-bottom: 940px;
-    font-size: 40px;
+    font-size: 70px;
   }
   .younes {
     margin-bottom: 250px;
   }
   div.heading {
-    font-size: 40px;
+    font-size: 60px;
   }
   .upper-main {
     margin-top: 350px;
   }
   h3,
   h4 {
-    font-size: 40px;
+    font-size: 65px;
   }
   .middle-main {
     padding-top: 95px;
     padding-bottom: 1020px;
   }
   ul {
-    font-size: 38px;
+    font-size: 63px;
   }
   .report {
-    padding-bottom: 20px;
-    padding-right: 1300px;
-    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 200px;
+    font-size: 70px;
   }
 }
