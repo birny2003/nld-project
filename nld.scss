@@ -203,6 +203,7 @@ li {
   }
   .younes {
     margin-bottom: 200px;
+    min-height: 90vh;
   }
   .upper-main {
     margin-top: 370px;
@@ -234,8 +235,8 @@ li {
   }
 }
 @media (min-width: 1440px) {
-  div.heading {
-    padding-top: 600px;
+  h1 {
+    padding-top: 255px;
   }
   .middle-main {
     padding-bottom: 340px;
@@ -253,18 +254,18 @@ li {
   .Header .navbar a {
     font-size: 75px;
   }
-  div.heading {
-    padding-top: 800px;
-  }
   header {
     margin-bottom: 940px;
-    font-size: 70px;
+    font-size: 40px;
   }
   .younes {
     margin-bottom: 250px;
   }
   div.heading {
-    font-size: 60px;
+    font-size: 40px;
+  }
+  h1 {
+    padding-top: 650px;
   }
   .upper-main {
     margin-top: 350px;
